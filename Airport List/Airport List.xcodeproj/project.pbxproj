@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48B55F841EE049A2003DB74E /* airportListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B55F831EE049A2003DB74E /* airportListViewCell.swift */; };
+		4894ED171EE679F7005476AF /* airportListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894ED161EE679F7005476AF /* airportListViewCell.swift */; };
 		48D83DA21EDEF0CC00F5CCD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D83DA11EDEF0CC00F5CCD9 /* AppDelegate.swift */; };
 		48D83DA41EDEF0CC00F5CCD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D83DA31EDEF0CC00F5CCD9 /* ViewController.swift */; };
 		48D83DA71EDEF0CC00F5CCD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D83DA51EDEF0CC00F5CCD9 /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		48B55F831EE049A2003DB74E /* airportListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportListViewCell.swift; sourceTree = "<group>"; };
+		4894ED161EE679F7005476AF /* airportListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportListViewCell.swift; sourceTree = "<group>"; };
 		48D83D9E1EDEF0CC00F5CCD9 /* Airport List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airport List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D83DA11EDEF0CC00F5CCD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D83DA31EDEF0CC00F5CCD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,12 +109,12 @@
 				48D83DA31EDEF0CC00F5CCD9 /* ViewController.swift */,
 				48D83DA51EDEF0CC00F5CCD9 /* Main.storyboard */,
 				48D83DD61EDEF89B00F5CCD9 /* AirportTableViewController.swift */,
+				4894ED161EE679F7005476AF /* airportListViewCell.swift */,
 				48D83DAB1EDEF0CC00F5CCD9 /* Assets.xcassets */,
 				48D83DAD1EDEF0CC00F5CCD9 /* LaunchScreen.storyboard */,
 				48D83DB01EDEF0CC00F5CCD9 /* Info.plist */,
 				48D83DA81EDEF0CC00F5CCD9 /* Airport_List.xcdatamodeld */,
 				48D83DD21EDEF2FF00F5CCD9 /* airports.plist */,
-				48B55F831EE049A2003DB74E /* airportListViewCell.swift */,
 			);
 			path = "Airport List";
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B55F841EE049A2003DB74E /* airportListViewCell.swift in Sources */,
+				4894ED171EE679F7005476AF /* airportListViewCell.swift in Sources */,
 				48D83DAA1EDEF0CC00F5CCD9 /* Airport_List.xcdatamodeld in Sources */,
 				48D83DA41EDEF0CC00F5CCD9 /* ViewController.swift in Sources */,
 				48D83DD71EDEF89B00F5CCD9 /* AirportTableViewController.swift in Sources */,

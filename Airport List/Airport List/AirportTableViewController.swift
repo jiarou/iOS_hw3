@@ -9,8 +9,9 @@
 import UIKit
 
 class AirportTableViewController: UITableViewController{
-   
     
+ 
+
     var items = [[String:String]] ()
     var Country: [String] = ["United States", "Germany","Russia", "China", "Australia", "Singapore", "United Kingdom", "France", "Japan", "Malaysia", "Taiwan", "Netherlands", "Thailand", "South Korea", "Philippines", "Canada", "Hong Kong"]
 
@@ -83,6 +84,7 @@ class AirportTableViewController: UITableViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(airportListViewCell.self, forCellReuseIdentifier: "airportListCell")
          self.items = loadCellAirports()
         let airportNumber = self.items.count
         for i in 0 ... airportNumber-1{
@@ -222,7 +224,7 @@ class AirportTableViewController: UITableViewController{
                                       style: .grouped)
         
         // 註冊 cell
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "airportListCell")
+        myTableView.register(airportListViewCell.self, forCellReuseIdentifier: "airportListCell")
         
         // 設置委任對象
         myTableView.delegate = self
@@ -260,39 +262,76 @@ class AirportTableViewController: UITableViewController{
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return all_airports.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return all_airports[section].count
     }
-    
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0:
-//            return "Personal"
-//            
-//        case 1:
-//            return "Preferences"
-//            
-//        default:
-//            return "Work Experience"
-//        }
-//    }
+  
 
-    
-
+    // 每個 section 的標題
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if let CountrysArray = Country as? [String]
+        {
+            return CountrysArray[section]
+        }
+        
+        // This should never happen, but is a fail safe
+        return "unknown"
+        
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "airportListCell", for: indexPath)
-        let item = self.items[indexPath.row]
+          // 取得 tableView 目前使用的 cell
+        let cell = tableView.dequeueReusableCell(withIdentifier:"airportListCell", for: indexPath) as? airportListViewCell
         
-        cell.textLabel?.text = item["Airport"]
+        
+        print(all_airports[indexPath.section][indexPath.row])
+//        cell?.airportView.text =  "\(all_airports[indexPath.section][indexPath.row])"
+            if let myLabel = cell?.airportView {
+                myLabel.text =
+                "\(all_airports[indexPath.section][indexPath.row])"
+            }
+        
+                if let myLabel01 = cell?.IAITView {
+                    myLabel01.text =
+                    "\(all_IATAs[indexPath.section][indexPath.row])"
+                }
+                if let myLabel02 = cell?.cityView {
+                    myLabel02.text =
+                    "\(all_ServedCitys[indexPath.section][indexPath.row])"
+                }
+        
+        
+            return cell!
+     
+//        let item = self.items[indexPath.row]
+//        
+//        cell.textLabel?.text = item["Airport"]
+ // 顯示的內容
+        
 
-
-        return cell
+      
+           //cell.airportView.text = "\(all_airports[indexPath.section][indexPath.row])"
+        
+//        cell.IAITView.text = "\(all_IATAs[indexPath.section][indexPath.row])"
+//        cell.CityView.text = "\(all_ServedCitys[indexPath.section][indexPath.row])"
+        
+        
     }
+    
+    // 點選 cell 後執行的動作
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 取消 cell 的選取狀態
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let name = all_airports[indexPath.section][indexPath.row]
+        print("選擇的是 \(name)")
+    }
+
 
 
     /*

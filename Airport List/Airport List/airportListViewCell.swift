@@ -10,7 +10,9 @@ import UIKit
 
 class airportListViewCell: UITableViewCell {
 
-
-
+  
+    @IBOutlet weak var IAITView: UILabel!
+    @IBOutlet weak var cityView: UILabel!
+    @IBOutlet weak var airportView: UILabel!
 
 }
