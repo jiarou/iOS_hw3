@@ -18,6 +18,7 @@
 		48D83DC51EDEF0CC00F5CCD9 /* Airport_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D83DC41EDEF0CC00F5CCD9 /* Airport_ListUITests.swift */; };
 		48D83DD31EDEF2FF00F5CCD9 /* airports.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48D83DD21EDEF2FF00F5CCD9 /* airports.plist */; };
 		48D83DD71EDEF89B00F5CCD9 /* AirportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D83DD61EDEF89B00F5CCD9 /* AirportTableViewController.swift */; };
+		48E9580F1EF83F2D00A18D7B /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E9580E1EF83F2D00A18D7B /* ShowDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		48D83DC61EDEF0CC00F5CCD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D83DD21EDEF2FF00F5CCD9 /* airports.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = airports.plist; sourceTree = "<group>"; };
 		48D83DD61EDEF89B00F5CCD9 /* AirportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportTableViewController.swift; sourceTree = "<group>"; };
+		48E9580E1EF83F2D00A18D7B /* ShowDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				48D83DB01EDEF0CC00F5CCD9 /* Info.plist */,
 				48D83DA81EDEF0CC00F5CCD9 /* Airport_List.xcdatamodeld */,
 				48D83DD21EDEF2FF00F5CCD9 /* airports.plist */,
+				48E9580E1EF83F2D00A18D7B /* ShowDetailViewController.swift */,
 			);
 			path = "Airport List";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E9580F1EF83F2D00A18D7B /* ShowDetailViewController.swift in Sources */,
 				4894ED171EE679F7005476AF /* airportListViewCell.swift in Sources */,
 				48D83DAA1EDEF0CC00F5CCD9 /* Airport_List.xcdatamodeld in Sources */,
 				48D83DA41EDEF0CC00F5CCD9 /* ViewController.swift in Sources */,
